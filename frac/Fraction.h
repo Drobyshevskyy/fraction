@@ -14,7 +14,6 @@ public:
 	long getDenominator();
 	void check();
 	void print();
-	double getDouble();
 	bool operator > (Fraction);
 	bool operator < (Fraction);
 	bool operator >= (Fraction);

@@ -17,10 +17,6 @@ long Fraction::getDenominator()
 {
 	return denominator;
 }
-double Fraction::getDouble() 
-{
-	return (double)numerator / (double)denominator;
-}
 void Fraction::print() 
 {
 	if (denominator != 1) 
