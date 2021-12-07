@@ -75,69 +75,27 @@ Fraction::Fraction(long m_numerator, long m_denominator)
 }
 bool Fraction::operator >(Fraction secondfraction) 
 {
-	if ((double)numerator / (double)denominator > secondfraction.getDouble())
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
+	return (numerator * secondfraction.getDenominator() - denominator * secondfraction.getNumerator() > 0);
 }
 bool Fraction::operator <(Fraction secondfraction) 
 {
-	if ((double)numerator / (double)denominator < secondfraction.getDouble())
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
+	return (numerator * secondfraction.getDenominator() - denominator * secondfraction.getNumerator() < 0);
 }
 bool Fraction::operator >=(Fraction secondfraction)
 {
-	if ((double)numerator / (double)denominator >= secondfraction.getDouble())
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
+	return (numerator * secondfraction.getDenominator() - denominator * secondfraction.getNumerator() >= 0);
 }
 bool Fraction::operator <=(Fraction secondfraction) 
 {
-	if ((double)numerator / (double)denominator <= secondfraction.getDouble())
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
+	return (numerator * secondfraction.getDenominator() - denominator * secondfraction.getNumerator() <= 0);
 }
 bool Fraction::operator ==(Fraction secondfraction) 
 {
-	if ((double)numerator / (double)denominator == secondfraction.getDouble())
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
+	return (numerator * secondfraction.getDenominator() - denominator * secondfraction.getNumerator() == 0);
 }
 bool Fraction::operator !=(Fraction secondfraction)
 {
-	if ((double)numerator / (double)denominator != secondfraction.getDouble())
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
+	return (numerator * secondfraction.getDenominator() - denominator * secondfraction.getNumerator() != 0);
 }
 Fraction Fraction::operator *(Fraction secondfraction) 
 {
